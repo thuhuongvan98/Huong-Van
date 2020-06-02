@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="icon" href="https://lh3.googleusercontent.com/L6ZHzkQA348VJuGqaw2VN6q0IHzjytvNJq1H87Y_YD68jeltz3oqUbuWiVPOVaYznw" type="image/gif" sizes="16x16"> 
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/table.css') }}">
+  <meta charset="utf-8">
+  <title>Kpop</title>
+  <h3><a href="/logout">Log Out</a></h3>
+  <h1 class="comicsanMS">KPOP Idols Information</h1>
+</head>
+<body class="calibri">
+  <table>
+    <tr>
+      <th>No.</th>
+      <th>Stage Name</th>
+      <th>Korean Name</th>
+      <th>DOB</th>
+      <th>Group</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+  {% for idol in idols %}
+    <tr>
+      <td>{{loop.index}}</td>
+      <td>{{idol["Stage name"]}}</td>
+      <td>{{idol["Korean name"]}}</td>
+      <td>{{idol.DOB}}</td>
+      <td>{{idol.Group}}</td>
+      <td><a href="/edit/{{idol['Stage name']}}">Edit</a></td>
+      <td><a href="/delete/{{idol['Stage name']}}">Delete</a></td>
+    </tr>
+  {% endfor %}
+  </table>
+</body>
+</html>

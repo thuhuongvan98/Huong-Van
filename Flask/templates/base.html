@@ -1,0 +1,19 @@
+<html>
+
+<head>
+    {% if title %}
+    <title>{{ title }} - Flask Lab</title>
+    {% else %}
+    <title>Flask Lab</title>
+    {% endif %}
+    <link href="/static/assets/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        
+    </style>
+</head>
+
+<body>
+    {% block content %} {% endblock %}
+</body>
+
+</html>

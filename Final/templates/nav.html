@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  font-size: 15px;
+  font-family: 'Georgia'
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 6px 8px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+.active {
+  background-color: rgb(219, 105, 39);
+}
+</style>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+  <a href="/"><img src="https://luynhlinhcoc.files.wordpress.com/2020/05/haha.png" alt="Picture2" width=100%/></a>
+<ul>
+  <li class="left"><a class="active" href="/">Search</a></li>
+  <li class="left"><a href="/add">Add Your Word</a></li>
+  <li class="left"><a href="/list">List of Words</a></li>
+  <li class="right"><a href="/{{code_login}}">{{check_login}}</a></li>
+  <li class="right" style="color: rgb(221, 190, 67)"><i><a href="">{{welcome}}</a></i></li>
+</ul>
+
+</body>
+<br></br>
+{% block content %}
+{% endblock %}
+</html>

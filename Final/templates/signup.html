@@ -1,0 +1,64 @@
+{% extends "nav.html" %}
+
+{% block content %}
+<!DOCTYPE html>
+<head>
+    <title>Sign Up</title>
+  </head>
+<html>
+    <style> 
+        table {
+            width: 35%;
+            } 
+        th {
+          height: 80px;
+        }
+        </style>
+<body>
+    <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <form method='post' role='form' action=''>
+                <fieldset>
+                    <legend><h2>Account Information</h2></legend> {{ form.hidden_tag() }}
+                    <table>
+                        <tr>
+                            <td>{{ form.username.label}}</td>
+                            <td>{{ form.username}}</td>
+                        </tr>
+                        <tr>
+                            <td>{{ form.password.label}}</td>
+                            <td>{{ form.password }}</td>
+                        </tr>
+                        <tr>
+                            <td>{{ form.repassword.label}}</td>
+                            <td>{{ form.repassword }}</td>
+                        </tr>
+                        <tr>
+                            <td colspan ="2"><h2>Personal Information</h2></td>
+                        </tr>
+                        <tr>
+                            <td>{{ form.firstname.label}}</td>
+                            <td>{{ form.firstname }}</td>
+                        </tr>
+                        <tr>
+                            <td>{{ form.lastname.label}}</td>
+                            <td>{{ form.lastname }}</td>
+                        </tr>
+                        <tr>
+                            <td>{{ form.dateofbirth.label}}</td>
+                            <td>{{ form.dateofbirth }}</td>
+                        </tr>
+                        <tr>
+                            <td>{{ form.submit(class="btn btn-warning") }}</td>
+                        </tr>
+                    </table>
+                </fieldset>
+                <p style="color:red"><i>{{warning}}</i></p>
+              </form>
+          </div>
+        </div>
+      </div>
+</body> 
+</html>
+{% endblock %}

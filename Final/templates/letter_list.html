@@ -1,0 +1,41 @@
+{% extends "nav.html" %}
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>List</title>
+  <style>
+    table {
+      width: 100%;
+      color: chocolate;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h2>Select a letter</h2>
+        <table>
+          <tr>
+            {% for i in alphabet %}
+            <td><a class="btn btn-warning" href="/list/{{i}}" role="button">{{i}}</a></td>
+            {% endfor %}
+          </tr>
+        </table>
+      <br></br>
+        <table>
+          {% for a in letter_list %}
+          <tr>
+            <td><a href="/define/{{a}}">{{a}}</a></td>
+          </tr>
+          {% endfor %}
+        </table>
+      </div>
+    </div>
+  </div>
+</body> 
+</html>
+
+{% endblock %}

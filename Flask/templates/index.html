@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<a href="/create">Create new idol</a>
+<table>
+    <tr>
+        <th>Index</th>
+        <th>Stage name</th>
+        <th>Full name</th>
+        <th>Korean name</th>
+        <th><i>action</i></th>
+    </tr>
+    {% for artist in artist_list %}
+    <tr>
+        <td>{{ loop.index }}</td>
+        <td><a href={{ "detail/" + artist.stage_name }}>{{ artist.stage_name }}</a></td>
+        <td>{{ artist.full_name }}</td>
+        <td>{{ artist.k_name }}</td>
+        <td><a href={{ "delete/" + artist.stage_name }}>Delete</a></td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "nav.html" %}
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Log In</title>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <form method='post' role='form' action=''>
+          <fieldset>
+            {{ form.hidden_tag() }}
+            {{ form.username.label}}
+            {{ form.username}}<br><br>
+            {{ form.password.label}}
+            {{ form.password }}<br><br>
+            {{ form.submit(class="btn btn-warning")}}<br><br>
+            <a href="/signup">Haven't had an account yet? Create your account here!</a>
+          </fieldset>
+          <p style="color:red"><i>{{warning}}</i></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</body> 
+</html>
+{% endblock %}

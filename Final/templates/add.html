@@ -1,0 +1,40 @@
+{% extends "nav.html" %}
+
+{% block content %}
+<head>
+    <title>Sign Up</title>
+  </head>
+<html>
+<body>
+    <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <form method='post' role='form' action=''>
+                <fieldset>
+                    <legend><h2>Add Your Word</h2></legend> {{ form.hidden_tag() }}
+                    <table>
+                        <tr>
+                            <td>{{ form.word.label}}</td>
+                            <td>{{ form.word}}</td>
+                        </tr>
+                        <tr>
+                            <td>{{ form.definition.label}}</td>
+                            <td>{{ form.definition }}</td>
+                        </tr>
+                        <tr>
+                            <td>{{ form.example.label}}</td>
+                            <td>{{ form.example }}</td>
+                        </tr>
+                        <tr>
+                            <td>{{ form.submit(class="btn btn-warning") }}</td>
+                        </tr>
+                    </table>
+                </fieldset>
+                <p style="color:red"><i>{{warning}}</i></p>
+              </form>
+          </div>
+        </div>
+      </div>
+</body> 
+</html>
+{% endblock %}

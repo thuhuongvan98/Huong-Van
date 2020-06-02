@@ -1,0 +1,18 @@
+<html>
+<title>Edit Information</title>
+<h1>Edit Information: {{stage_name}}</h1>
+<form method="POST" role="form" action="">
+    {{ form.hidden_tag() }}
+    {{ form.edit_stage_name.label}}<br>
+    {{ form.edit_stage_name }}<br>
+    {{ form.edit_korean_name.label }}<br>
+    {{ form.edit_korean_name }}<br>
+    {{ form.edit_DOB.label }}<br>
+    {{ form.edit_DOB }}<br>
+    {{ form.edit_group.label }}<br>
+    {{ form.edit_group }}<br>
+    <br><br>
+    {{ form.submit }}
+</form>
+
+</html>

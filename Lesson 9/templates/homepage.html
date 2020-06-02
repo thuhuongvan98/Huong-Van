@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  {% for idol in idols_data %}
+    <h1>{{loop.index}} {{idol.stage_name}}</h1>
+    <a href="/idol/{{idol._id}}">detail</a>
+    <a href="/delete/{{idol._id}}">delete</a>
+    <hr>
+  {% endfor %}
+</body>
+</html>

@@ -1,0 +1,39 @@
+table, td, th {
+    border: 1px solid black;
+}
+th
+{
+  background-color:darkred;
+  color: white;
+}
+table
+{
+  border-collapse:collapse;
+  width:100%;
+}
+td
+{
+  height:20px;
+}
+tr
+{
+  background-color: pink;
+  color:black;
+}
+body {
+    background-color: powderblue;
+}
+tr:hover {background-color: rgb(231, 151, 165);}
+
+body {
+  background-image: "https://wallpaperplay.com/walls/full/8/0/7/48495.jpg";
+  background-repeat: no-repeat;
+  background-size: 1280px;
+}
+.calibri {
+  font-family: Calibri, sans-serif;
+}
+.comicsanMS {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+

@@ -1,0 +1,28 @@
+{% extends "nav.html" %}
+
+{% block content %}
+<head>
+    <title>Definition</title>
+</head>
+<style>
+    table,tr {background-color:rgb(255, 255, 255)}
+</style>
+<body>
+    <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <table style="background-color:rgb(255, 255, 255)">
+                <tr><h2>{{define.word}}</h2></tr>
+                <tr><p>Definition: {{define.definition}}</p></tr>
+                <tr><p><i>Example: {{define.example}}</i></p></tr>
+                <tr><p>Tags: {{define.tag}}</p></tr>
+            </table>
+            <a class="btn btn-danger" href="/delete/{{define.word}}" role="button">Delete</a>
+            <a class="btn btn-warning" href="/edit/{{define.word}}" role="button">Edit</a>
+          </div>
+        </div>
+      </div>
+</body>
+{% endblock %}
+
+

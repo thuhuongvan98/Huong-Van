@@ -1,0 +1,32 @@
+body {
+    background-color: rgb(224, 198, 181);
+}
+
+
+.calibri {
+  font-family: Calibri, sans-serif;
+}
+.comicsanMS {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+h2 {
+  color: rgb(117, 69, 14);
+  font-family: 'Georgia';
+  font-size: 150%
+}
+
+p  {
+  color: rgb(46, 22, 12);
+  font-size: 100%;
+}
+.header {
+  padding: 20px;
+  text-align: center;
+  background: #5c2121;
+  color: white;
+  font-size: 30px;
+}
+
+.left { float:left}
+.right { float:right}
